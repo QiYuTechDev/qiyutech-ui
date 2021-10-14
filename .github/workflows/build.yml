@@ -15,7 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: yarn install
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+
+      - name: Install Package
         run: yarn install
 
       - name: build
