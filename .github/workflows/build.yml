@@ -16,14 +16,15 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Cache Node Modules
+        id: yarn-cache
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
 
       - name: Install Package
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
 
-      - name: build
-        run: |
-          make build
+      - name: Build
+        run: make build
