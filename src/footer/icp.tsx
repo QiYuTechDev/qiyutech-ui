@@ -2,7 +2,7 @@ import * as React from 'react';
 import {ReactNode} from 'react';
 import {Container, Link, Typography} from "@mui/material";
 
-const gaImg = require("ga.png")
+const gaImg = require("./ga.png")
 
 interface ICPFooterProps {
     // ICP 备案序号
