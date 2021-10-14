@@ -8,8 +8,6 @@ interface ICPFooterProps {
     icp_num: number
     // 公安备案号码
     ga_num?: string
-    // 公安备案图片
-    ga_img?: string
 }
 
 interface ICPFooterState {
@@ -64,7 +62,7 @@ export class ICPFooterBlock extends React.Component<ICPFooterProps, ICPFooterSta
 
         return <>
             <a href={url.toString()} target="_blank">
-                <img src={this.props.ga_img} alt="公安"/>津公网安备 {ga_num} 号
+                <img src="./ga.png" alt="公安"/>津公网安备 {ga_num} 号
             </a>
         </>
     }
