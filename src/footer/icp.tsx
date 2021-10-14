@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {ReactNode} from 'react';
-import {Container, Link, Typography} from "@mui/material"
+import {Container, Link, Typography} from "@mui/material";
 
+const gaImg = require("ga.png")
 
 interface ICPFooterProps {
     // ICP 备案序号
@@ -62,7 +63,7 @@ export class ICPFooterBlock extends React.Component<ICPFooterProps, ICPFooterSta
 
         return <>
             <a href={url.toString()} target="_blank">
-                <img src="./ga.png" alt="公安"/>津公网安备 {ga_num} 号
+                <img src={gaImg} alt="公安"/>津公网安备 {ga_num} 号
             </a>
         </>
     }
