@@ -15,7 +15,10 @@
     "type": "git",
     "url": "https://github.com/QiYuTechDev/qiyutech-ui/issues"
   },
-  "files": [],
+  "files": [
+    "README.md",
+    "dist/"
+  ],
   "source": "src/index.ts",
   "main": "./dist/index.cjs",
   "module": "dist/index.mjs",
