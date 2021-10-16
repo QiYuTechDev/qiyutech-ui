@@ -5,3 +5,6 @@ clean:
 
 build: clean
 	yarn parcel build src/index.ts
+
+publish: build
+	npm publish
